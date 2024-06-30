@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import MoviesList from "./components/MoviesList";
 import "./App.css";
+import MyForm from "./components/MyForm";
+
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -45,7 +47,8 @@ function App() {
   return (
     <React.Fragment>
       <section>
-        <button type="button" onClick={fetchMoviesHandler}>
+        <MyForm/>
+        <button  type="button" onClick={fetchMoviesHandler}>
           Fetch Movies
         </button>
       </section>
